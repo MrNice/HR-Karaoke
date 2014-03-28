@@ -1,4 +1,4 @@
-var app = angular.module('karaoke', [])
+var app = angular.module('karaoke', ['ngRoute'])
   .controller('HomeController', function() {
 
   });
