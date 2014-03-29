@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
+angular.module('karaoke.controllers', [])
    .controller('HomeCtrl', ['$scope', 'syncData', function($scope, syncData) {
       syncData('syncedValue').$bind($scope, 'syncedValue');
    }])
@@ -12,7 +12,7 @@ angular.module('myApp.controllers', [])
 
       // constrain number of messages by limit into syncData
       // add the array into $scope.messages
-      $scope.messages = syncData('messages', 10);
+      $scope.messages = syncData('messages');
 
       // add new messages to the list
       $scope.addMessage = function() {
