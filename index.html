@@ -5,8 +5,16 @@
 <script src="app.js"></script>
 <body ng-app="karaoke">
   <div ng-controller="HomeController">
-    <input ng-model="test" type="text"/>
+    <div ng-controller="VoteController">
+      <ul>
+        <li ng-repeat="song in songs">
+          {{ song }}
+        </li>
+      </ul>
+    </div>
     <p>{{ test }}</p>
+    <input ng-model="test" type="text"/>
+    <button ng-click="songs[test] = test">Add</button>
   </div>
 </body>
 </html>
